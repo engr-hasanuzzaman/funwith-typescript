@@ -21,3 +21,26 @@ let drDescription = (person: Person): string => {
 }
 
 console.log(drDescription({name: "sumon", age: 29}))
+
+// type assertion
+
+let sumon = {} as Person;
+console.log(sumon.age);
+
+// class
+class P{
+  private fName: string;
+  private lName: string;
+
+  constructor(fn: string, ln: string){
+    this.fName = fn;
+    this.lName = ln;
+  }
+
+  fullName(){
+    return `${this.fName} ${this.lName}`
+  }
+}
+
+let su: P = new P("Hasan", "zaman")
+console.log(su.fullName())
