@@ -8,3 +8,16 @@ console.log(Month[10])
 let person: [string, number];
 person = ["sumon", 29]
 console.log(person)
+
+// interface
+interface Person {
+  name: string,
+  age: number,
+  phone?: string
+}
+
+let drDescription = (person: Person): string => {
+  return person.name + person.age + person.phone;
+}
+
+console.log(drDescription({name: "sumon", age: 29}))

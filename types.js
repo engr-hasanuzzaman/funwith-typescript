@@ -11,3 +11,7 @@ console.log(Month[10]);
 let person;
 person = ["sumon", 29];
 console.log(person);
+let drDescription = (person) => {
+    return person.name + person.age + person.phone;
+};
+console.log(drDescription({ name: "sumon", age: 29 }));
