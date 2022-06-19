@@ -1,5 +1,10 @@
 export const name = "sumon";
-console.log('------foo is executed');
+
+const foo = () => {
+    console.log('------foo is executed');
+}
+
+// foo();
 
 // setInterval(() => {
 //     console.log('-------hello');
