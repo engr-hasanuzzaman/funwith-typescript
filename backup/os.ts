@@ -1,16 +1,22 @@
 import os from 'os';
+import { object } from 'zod';
 
 const user = os.userInfo();
 console.log(`Current user info is`);
 console.log(user);
-
 const byteToGb = (byteSize: number) => byteSize / (1024 * 1024 * 1024)
-const cpuInfos = os.cpus();
-const ramSize = byteToGb(os.totalmem()) // gb
-const freeMem = byteToGb(os.freemem())
-console.log(cpuInfos[0]);
-console.log(`memory size ${ramSize}`);
-console.log(`free memory size ${freeMem}`);
+const osInfo = {
+    name: os.type(),
+    release: os.release(),
+    totatlMemo: byteToGb(os.totalmem()),
+    freeMemo: byteToGb(os.freemem()),
+    numOfCpu: os.cpus().length
+};
+
+console.log('-----os info is');
+console.log(osInfo);
+
+
 
 
 
