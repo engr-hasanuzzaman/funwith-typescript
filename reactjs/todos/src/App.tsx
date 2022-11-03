@@ -10,17 +10,17 @@ function App() {
 
   const addTodo = (e: React.FormEvent) => {
     e.preventDefault();
-    console.log("new todo value is ", todo);
     setTodos((curTodos) => [...curTodos, { task: todo, status: false, id: Math.random() * 10000}]);
+    setTodo('');
   }
 
 
   return (
     <div className="App">
-      <header className="App-header">
+      <div>
         <h3>Todos</h3>
         <TextInput todo={todo} setTodo={setTodo} handleAdd={addTodo}/>
-      </header>
+      </div>
 
       <TodoList todos={todos} />
     </div>
